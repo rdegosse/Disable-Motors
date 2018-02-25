@@ -7,9 +7,9 @@ class MyFarmware():
     def get_input_env(self):
         prefix = self.farmwarename.lower().replace('-','_')
         
-        self.input_movement_keep_active_x = os.environ.get(prefix+"_movement_keep_active_x", '1')
-        self.input_movement_keep_active_y = os.environ.get(prefix+"_movement_keep_active_y", '1')
-        self.input_movement_keep_active_z = os.environ.get(prefix+"_movement_keep_active_z", '1')
+        self.input_movement_keep_active_x = os.environ.get(prefix+"_movement_keep_active_x", '0')
+        self.input_movement_keep_active_y = os.environ.get(prefix+"_movement_keep_active_y", '0')
+        self.input_movement_keep_active_z = os.environ.get(prefix+"_movement_keep_active_z", '0')
         self.input_debug = int(os.environ.get(prefix+"_debug", 1))
 
         if self.input_debug >= 1:
